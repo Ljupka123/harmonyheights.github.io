@@ -1,0 +1,674 @@
+@font-face {
+    font-family: DancingScript;
+    src: url(fonts/DancingScript-Bold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: DancingScript;
+    src: url(fonts/DancingScript-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Dosis;
+    src: url(fonts/Dosis-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Dosis;
+    src: url(fonts/Dosis-Bold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Dosis;
+    src: url(fonts/Dosis-Light.woff2);
+    font-weight: 300;
+}
+@font-face {
+    font-family: LibreFranklin;
+    src: url(fonts/LibreFranklin-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: LibreFranklin;
+    src: url(fonts/LibreFranklin-Bold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: LibreFranklin;
+    src: url(fonts/LibreFranklin-Medium.woff2);
+    font-weight: 500;
+}
+@font-face {
+    font-family: LibreFranklin;
+    src: url(fonts/LibreFranklin-BoldItalic.woff2);
+    font-weight: 700;
+}
+ 
+
+body{
+    background-color:#f0a543;
+}
+
+*{
+    text-decoration: none;
+    color: rgb(53, 104, 53);
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+#pageLogo{
+padding: 10px 10px;
+}
+
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #283e4d;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+header h1.name {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: "DancingScript";
+  text-decoration: overline;
+  color: #eb770b;
+  display: inline-block;
+  transform-origin: center;
+ animation: rotateBounce 4s ease-in-out forwards; 
+}
+
+@keyframes rotateBounce {
+    0% {
+        transform: rotate(-360deg);
+    }
+    80% {
+        transform: rotate(15deg);
+    }
+    90% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg); 
+    }
+}
+
+.nav-top ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px;
+}
+
+.nav-top ul li a {
+  text-decoration: none;
+  color: #eb770b;
+  font-family: "LibreFranklin";
+  font-weight: 400;
+  font-size: 15px;
+  justify-content: end;
+}
+
+.primary-btn {
+    background-color: rgb(161, 171, 224);
+    color: black;
+    padding: 10px 10px;
+    margin: 10px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: #013b1e 2px 2px 4px;
+    border: 1px solid transparent;
+    cursor:pointer;
+    transition: .5s ease-in-out;
+}
+.primary-btn:hover{
+    color: #a15502;
+    border-color: #015a09;
+    background-color: #ffffff;
+    transition: .5s ease-in-out;
+}
+
+.section-header {
+  display: flex;
+  background-color:#814949; 
+  z-index: 10;
+  position: relative;
+  width: 100%;
+}
+
+.menu-container {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-button {
+    background-color: rgb(161, 171, 224);
+    color: black;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: #013b1e 2px 2px 4px;
+    border: 1px solid transparent;
+    cursor:pointer;
+    margin: 5px 35px 5px 0;
+}
+
+.menu-button:hover { 
+  background-color: #814949;
+  color: #fff;
+}
+
+
+.nav-right {
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  background-color: #814949;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  padding: 5px;
+  z-index: 9;
+  display: none;
+}
+
+.menu-container:hover .nav-right {
+  opacity: 1;
+  pointer-events: auto;
+  display: block;
+}
+
+.nav-right .nav-link {
+  text-decoration: none;
+  color: #eb770b;
+  font-family: "LibreFranklin", sans-serif;
+  font-weight: 400;
+  padding: 10px 10px;
+  flex: 1;
+}
+
+.nav-right .nav-link:hover { 
+  background-color: #9d5b5b;
+  color: #fff;
+}
+
+.burger-btn{
+    display: none;
+}
+
+.hero-shot{
+    background-color: #283e4d;
+    display: flex;
+    gap: 5%;
+    margin-bottom: 30px;
+}
+
+.hero-shot-item{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.hero-shot-item img{
+    width: auto;
+}
+
+.hero-shot-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-shot-text p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    font-family: "Dosis";
+    font-weight: 400;
+    font-size: 28px;
+    color: #eb770b;
+   
+}
+
+.secondary-button{
+    background-color: rgb(161, 171, 224);
+    color: black;
+    padding: 10px 10px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: #d15401 2px 2px 4px;
+    cursor: pointer;
+}
+
+.secondary-button:hover{
+    background-color: #d15401;
+}
+.specialist-areas span{
+background-color: #814949;
+color: #eb770b;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: "LibreFranklin";
+font-weight: 400;
+font-size: 28px;
+padding: 5px 10px;
+margin-bottom: 30px;
+}
+
+.marketing-banner{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    background-color:#283e4d;
+    padding: 40px 20px;   
+}
+
+.banner-track{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.banner-item img{
+    display: block;
+    width: 400px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+}
+
+.banner-item img :hover{
+    box-shadow: 10px 30px #eb770b;
+    transform: scale(1.05);
+}
+
+.banner-item span{
+    display: block;
+    color: #eb770b;
+    font-family: "Dosis";
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 30px;
+}
+
+#main-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.Classes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 90%;
+  max-width: auto;
+}
+
+.instruments {
+  flex: 1 0 246.9px;
+  background-color: #814949;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: #9d5b5b;
+  text-align: center;
+  color: #eb770b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin: 30px;
+  gap: 15px;
+  text-align: center;
+}
+
+.instruments:hover { 
+  transform: translateY(-5px);
+}
+
+.position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.instruments:nth-child(odd) {
+  background-color: #814949;
+}
+
+.instruments:nth-child(even){
+  background-color:#283e4d;
+}
+
+.title {
+  display: flex;
+  color: #eb770b;
+  text-decoration: underline;
+  font-family: "Dosis";
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.text {
+  display: flex;
+  color: #eb770b;
+  font-family: "Dosis";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 90%;
+}
+
+.img img {
+  border-radius: 10px;
+  max-width: 250px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.list li{
+  position: relative;
+  display: flex;
+  color:black;
+  font-family: "Dosis";
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#f0a543;
+  font-size: 13px;
+}
+
+.instruments .primary-btn {
+  margin-top: 15px;
+}
+
+.nav-left{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    font-family: "LibreFranklin";
+    font-weight: 400;
+    font-size: 15px;
+    margin: 30px 0px 10px 30px;
+}
+
+.nav-left a {
+  position: relative;
+  white-space: nowrap;
+  color: #854102;
+}
+
+.nav-left a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav-left a:not(:last-child)::after {
+  content: "|";
+  margin: 5px;
+  color: #854102;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+ nav{
+        position: fixed;
+        flex-direction: column;
+        width: 70vw;
+        height: 100dvh;
+        background-color: #283e4d;
+        right: 0;
+        top: 0;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform .5s ease-in-out;
+        display: none
+ }
+
+ .nav-open nav{
+    transform: translateX(0);
+    transition: transform .5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #283e4d;
+    width: 70vw;
+    height: 100dvh;
+    padding: 20px;
+    z-index: 99;
+ }
+
+ .burger-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:0;
+    order: 2;
+    margin-right: 20px;
+   }
+
+  .main-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    gap: 5px;
+  }
+
+  #pageLogo {
+    width: 40px;
+    height: auto;
+  }
+
+  header h1.name {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .primary-btn {
+    order: 3;
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    ;
+  }
+
+  .section-header {
+    display: none;
+  }
+  .hero-shot {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .hero-shot-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-shot-item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .hero-shot-text p {
+    font-size: 20px;
+  }
+
+  .secondary-button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .specialist-areas span {
+    font-size: 22px;
+    padding: 5px;
+  }
+
+  .marketing-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .banner-track {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .banner-item img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .banner-item span {
+    font-size: 22px;
+    margin: 10px;
+  }
+
+  #main-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Classes {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .instruments {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    padding: 15px;
+    max-width: calc(50% - 20px);
+    
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .img img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+
+  .list {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .list li {
+    font-size: 15px;
+  }
+
+  .instruments .primary-btn {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .nav-left {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-left a::after {
+    content: "";
+  }
+
+}
